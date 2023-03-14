@@ -8,3 +8,6 @@ install:
 	pip3 install -r requirements.txt
 run:
 	$(py_exe) main.py
+docker:
+	docker build -t chatbot .
+	docker run -p 8080:8080 chatbot
